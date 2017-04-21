@@ -25,7 +25,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 
 **To Query Database:**
 
-For a student, they need know the academic year, semester, course.
+For a student, they need know the academic year, semester, course:
 
 ```
 MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
@@ -41,6 +41,16 @@ This will return the student's entire time table, the groups, the modules, the c
 MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
 (:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
+(mod:Module)-[:IN]->(room:Room)-[:AT]->(time:Time)-[:ON]->(day:Day), 
+(mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
+```
+
+To search a student timetable with a specific course group:
+
+```
+MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
+(course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group {name:"C"})-[:ATTENDING]->
 (mod:Module)-[:IN]->(room:Room)-[:AT]->(time:Time)-[:ON]->(day:Day), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
 ```
