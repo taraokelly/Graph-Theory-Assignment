@@ -16,7 +16,7 @@ CREATE (year:Academic_Yr {name: "2017"}), (dept:Dept {name:"Galway Campus - Dept
 
 (2017)-[:SEM_3]->(Software Development L7 Y3)-[:HAS]->(Software Development L7 Y3)-[:GROUP]->(C)-[:ATTENDING]->(Graph Theory)-[:IN]->(1000)-[:AT]->(09:00)-[:ON]->(Monday)
 
-2017, *Semester 3*, Software Development L7 Y3 *HAS* Software Development L7 Y3 *GROUP* C *ATTENDING* Graph Theory *IN* 1000 *AT* 9:00 *ON* Monday.
+2017, **Semester 3**, Software Development L7 Y3 **HAS** Software Development L7 Y3 **GROUP** C **ATTENDING** Graph Theory **IN** 1000 **AT** 9:00 **ON** Monday.
 
 -----
 
