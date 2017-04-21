@@ -64,6 +64,30 @@ CREATE (year:Academic_Yr {name: "2017"}),
 
 __*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
 
+
+## Setting Up Database
+
+### Creating Constraints and Indexes:
+
+Create constraint for the Academic_Yr node (this also creates an index).
+ 
+```
+CREATE CONSTRAINT ON (a:Academic_Yr) ASSERT a.name IS UNIQUE;
+```
+
+Create indexes.
+
+```
+CREATE INDEX ON :Dept(name);
+CREATE INDEX ON :Course(name);
+CREATE INDEX ON :Group(name);
+CREATE INDEX ON :Lecture(name);
+CREATE INDEX ON :Module(name);
+CREATE INDEX ON :Room(name);
+CREATE INDEX ON :Time(name);
+CREATE INDEX ON :Day(name);
+```
+
 ## To Query Database
 
 ### Student Timetable:
