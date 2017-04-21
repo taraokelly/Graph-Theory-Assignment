@@ -3,7 +3,7 @@
 
 ## Database Design
 
-**First Draft:**
+### First Draft:
 
 ```
 CREATE (year:Academic_Yr {name: "2017"}), 
@@ -27,7 +27,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 
 ## To Query Database
 
-**Student Timetable:**
+### Student Timetable:
 
 For a student, they need know the *academic year*, *semester*, *course*:
 
