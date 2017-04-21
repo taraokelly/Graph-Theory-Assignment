@@ -17,13 +17,33 @@ CREATE (year:Academic_Yr {name: "2017"}),
 (time)-[:ON]->(day);
 ```
 
-![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v0.PNG "v0.0.1")
+![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v1.PNG "v0.0.1")
 
 __*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
 
-(2017)-[:SEM_3]->(Software Development L7 Y3)-[:HAS]->(Software Development L7 Y3)-[:GROUP]->(C)-[:ATTENDING]->(Graph Theory)-[:IN]->(1000)-[:AT]->(09:00)-[:ON]->(Monday)
+- (2017)-[:SEM_3]->(Software Development L7 Y3)-[:HAS]->(Software Development L7 Y3)-[:GROUP]->(C)-[:ATTENDING]->(Graph Theory)-[:IN]->(1000)-[:AT]->(09:00)-[:ON]->(Monday)
 
-2017, SEMESTER 3, Software Development L7 Y3 HAS Software Development L7 Y3 GROUP C ATTENDING Graph Theory IN 1000 AT 9:00 ON Monday.
+- 2017, SEMESTER 3, Software Development L7 Y3 HAS Software Development L7 Y3 GROUP C ATTENDING Graph Theory IN 1000 AT 9:00 ON Monday.
+
+### Second Draft:
+
+In the first draft of the DB design, the room, time, and day nodes had nothing directly assigned to them to distinguish what year and semester it was assigned to. This would have be adequate if it were not for the inability to search for a rooms availabilty, overall available rooms or what module has been assigned to a specific room and time slot.
+
+```
+CREATE (year:Academic_Yr {name: "2017"}), 
+(dept:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"}), 
+(course:Course {name:"Software Development L7 Y3"}), (group :Group {name:"C"}), 
+(lect:Lecturer {name:"Ian McLoughlin"}), (mod:Module {name:"Graph Theory"}), 
+(room:Room {name:"1000"}), (time:Time {name:"09:00"}), (day:Day {name:"Monday"}), 
+(year)-[:SEM_2]->(dept), (dept)-[:HAS]->(course), (dept)-[:HAS]->(lect), 
+(course)-[:GROUP]->(group), (group)-[:ATTENDING]->(mod), 
+(lect)-[:LECTURING]->(mod), (mod)-[:IN]->(room), (room)-[:AT]->(time),
+(time)-[:ON]->(day), (year)-[:SEM_2]->(room);
+```
+
+![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v2.PNG "v0.0.2")
+
+__*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
 
 ## To Query Database
 
