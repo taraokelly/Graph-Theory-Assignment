@@ -50,7 +50,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 The second draft's time and day nodes were still not distinguishable in terms of what year and semester it was related to. With the room node coming first, there would there would have to be seperate time slots for each room and seperate days for each time slot. Relative to these three node types, with the quantity of the the rooms being the largest, and the quantity of the time slots being the second largest, this design seemed inefficient.
 
 ```
-CREATE (year:Academic_Yr {name: "2015"}), 
+CREATE (year:Academic_Yr {name: "2017"}), 
 (dept:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"}), 
 (course:Course {name:"Software Development L7 Y3"}), (group :Group {name:"C"}), 
 (lect:Lecturer {name:"Ian McLoughlin"}), (mod:Module {name:"Graph Theory"}), 
@@ -74,7 +74,7 @@ For a student, they need know the **academic year**, **semester**, and **course*
 MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
 (dept:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
-(mod:Module)-[:IN]->(room:Room)-[:AT]->(time:Time)-[:ON]->(day:Day), 
+(mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN year, dept, course, g, mod, room, time, day, lect;
 ```
 
@@ -84,7 +84,7 @@ This will return the student's entire time table, the groups, the modules, the c
 MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
 (:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
-(mod:Module)-[:IN]->(room:Room)-[:AT]->(time:Time)-[:ON]->(day:Day), 
+(mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
 ```
 
@@ -93,8 +93,8 @@ To search a student timetable with a specific course **group**:
 ```
 MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
 (:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
-(course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group {name:"C"})-[:ATTENDING]->
-(mod:Module)-[:IN]->(room:Room)-[:AT]->(time:Time)-[:ON]->(day:Day), 
+(course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group{name: "C"})-[:ATTENDING]->
+(mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
 ```
 
