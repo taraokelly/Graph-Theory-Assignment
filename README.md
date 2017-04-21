@@ -23,7 +23,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 
 2017, SEMESTER 3, Software Development L7 Y3 HAS Software Development L7 Y3 GROUP C ATTENDING Graph Theory IN 1000 AT 9:00 ON Monday.
 
-## To Query Database
+### To Query Database
 
 **Student Timetable:**
 
