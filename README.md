@@ -27,7 +27,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 
 ### Second Draft:
 
-In the first draft of the DB design, the room, time, and day nodes had nothing directly assigned to them to distinguish what year and semester it was assigned to. This would have be adequate if it were not for the inability to search for a rooms availabilty, overall available rooms or what module has been assigned to a specific room and time slot.
+In the first draft of the DB design, the room, time, and day nodes had nothing directly assigned to them to distinguish what year and semester it was assigned to. This would have be adequate if it were not for the inability to search for a room's availabilty, the overall available rooms or what module has been assigned to a specific room and time slot.
 
 ```
 CREATE (year:Academic_Yr {name: "2017"}), 
@@ -42,6 +42,25 @@ CREATE (year:Academic_Yr {name: "2017"}),
 ```
 
 ![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v2.PNG "v0.0.2")
+
+__*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
+
+### Third Draft:
+
+The second draft's time and day nodes were still not distinguishable in terms of what year and semester it was related to. With the room node coming first, there would there would have to be seperate time slots for each room and seperate days for each time slot. Relative to these three node types, with the quantity of the the rooms being the largest, and the quantity of the time slots being the second largest, this design seemed inefficient.
+
+```
+CREATE (year:Academic_Yr {name: "2015"}), 
+(dept:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"}), 
+(course:Course {name:"Software Development L7 Y3"}), (group :Group {name:"C"}), 
+(lect:Lecturer {name:"Ian McLoughlin"}), (mod:Module {name:"Graph Theory"}), 
+(room:Room {name:"1000"}), (time:Time {name:"09:00"}), (day:Day {name:"Monday"}), 
+(year)-[:SEM_2]->(dept), (dept)-[:HAS]->(course), (dept)-[:HAS]->(lect), 
+(course)-[:GROUP]->(group), (group)-[:ATTENDING]->(mod), (lect)-[:LECTURING]->(mod), 
+(mod)-[:ON]->(day), (day)-[:AT]->(time),(time)-[:IN]->(room), (year)-[:SEM_2]->(day);
+```
+
+![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v3.PNG "v0.0.3")
 
 __*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
 
