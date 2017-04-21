@@ -29,7 +29,7 @@ __*N.B. This draft's data is not accurate, just used for testing/demonstrational
 
 ### Student Timetable:
 
-For a student, they need know the *academic year*, *semester*, *course*:
+For a student, they need know the **academic year**, **semester**, and **course**:
 
 ```
 MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
@@ -49,7 +49,7 @@ MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]->
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
 ```
 
-To search a student timetable with a specific course group:
+To search a student timetable with a specific course **group**:
 
 ```
 MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
