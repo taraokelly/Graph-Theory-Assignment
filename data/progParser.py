@@ -62,5 +62,5 @@ for child in root:
             if count > 1:
                 ss += " " + subs
             count += 1
-        row = [s[0], ss, "Unknown"]
+        row = [ss, s[0], "Unknown"]
     out.writerow(row)    
