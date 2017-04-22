@@ -208,13 +208,13 @@ CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}),
 (year)-[:SEM_1]->(d11s1), (year)-[:SEM_1]->(d12s1),
 (year)-[:SEM_1]->(d13s1),
 (year)-[:SEM_2]->(thu2), (year)-[:SEM_2]->(fri2),
-(year)-[:SEM_1]->(d1s2), (year)-[:SEM_1]->(d2s2), 
-(year)-[:SEM_1]->(d3s2), (year)-[:SEM_1]->(d4s2), 
-(year)-[:SEM_1]->(d5s2), (year)-[:SEM_1]->(d6s2),
-(year)-[:SEM_1]->(d7s2), (year)-[:SEM_1]->(d8s2), 
-(year)-[:SEM_1]->(d9s2), (year)-[:SEM_1]->(d10s2), 
-(year)-[:SEM_1]->(d11s2), (year)-[:SEM_1]->(d12s2),
-(year)-[:SEM_1]->(d13s2),
+(year)-[:SEM_2]->(d1s2), (year)-[:SEM_2]->(d2s2), 
+(year)-[:SEM_2]->(d3s2), (year)-[:SEM_2]->(d4s2), 
+(year)-[:SEM_2]->(d5s2), (year)-[:SEM_2]->(d6s2),
+(year)-[:SEM_2]->(d7s2), (year)-[:SEM_2]->(d8s2), 
+(year)-[:SEM_2]->(d9s2), (year)-[:SEM_2]->(d10s2), 
+(year)-[:SEM_2]->(d11s2), (year)-[:SEM_2]->(d12s2),
+(year)-[:SEM_2]->(d13s2),
 (mon1)-[:AT]->(mon1t1), (mon1)-[:AT]->(mon1t2),
 (mon1)-[:AT]->(mon1t3), (mon1)-[:AT]->(mon1t4),
 (mon1)-[:AT]->(mon1t5), (mon1)-[:AT]->(mon1t6),
@@ -290,8 +290,42 @@ CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}),
 Load in courses from csv file.
 
 ```
-USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///programmes.csv" as row create (:Course {name: row.course, code: row.code, campus: row.degree, year: "2017", sem:"2"});
+USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///programmes.csv" as row create (:Course {name: row.course, code: row.code, campus: row.degree, dept:row.dept, year: "2017", sem:"2"});
 ```
+
+Connect courses to the corresponding department
+
+```
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Creative Arts and Media"}), (c:Course {dept:"CCAM", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Building and Civil Engineering"}), (c:Course {dept:"CE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"}), (c:Course {dept:"CS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Culinary Arts"}), (c:Course {dept:"CA", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Heritage and Tourism"}), (c:Course {dept:"HT", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Life and Physical Sciences"}), (c:Course {dept:"LPS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Mechanical and Industrial Engineering"}), (c:Course {dept:"MIE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Service Industries"}), (c:Course {dept:"SI", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Accounting & Information Systems"}), (c:Course {dept:"SOB_AIS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Management"}), (c:Course {dept:"SOB_M", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"National Centre for Excellence in Furniture Design and Technology"}), (c:Course {dept:"EFDT", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Mayo Campus"}), (c:Course {dept:"Mayo", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+```
+
+
 
 ## To Query Database
 
