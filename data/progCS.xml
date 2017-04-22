@@ -1,0 +1,37 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="GA_KBDIG_B0723BDI7">G-KBDIG72 BSc in Business Computing &amp; Digital Media L7 Yr 2 Sem 3</option>
+			<option value="GA_KBDIG_B0724BDI7">G-KBDIG72 BSc in Business Computing &amp; Digital Media L7 Yr 2 Sem 4</option>
+			<option value="GA_KBDIG_B0735BDI7">G-KBDIG73 BSc in Business Computing &amp; Digital Media L7 Yr 3 Sem 5</option>
+			<option value="GA_KBDIG_B0736BDI7">G-KBDIG73 BSc in Business Computing &amp; Digital Media L7 Yr 3 Sem 6</option>
+			<option value="GA_KBDIG_B0711BDI7">G-KCDMG71 BSc in Business Computing &amp; Digital Media L7 Yr 1 Sem 1</option>
+			<option value="GA_KBDIG_B0712BDI7">G-KCDMG71 BSc in Business Computing &amp; Digital Media L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSC27F75">G-KCDMG81 BSc in Business Computing &amp; Digital Media L8 Yr 1 Sem 1</option>
+			<option value="#SPLUSC27F7B">G-KCDMG81 BSc in Business Computing &amp; Digital Media L8 Yr 1 Sem 2</option>
+			<option value="#SPLUS3D630E">G-KCDMG84 BSc in Computing and Digital Media
+ L8 Yr 4 Sem 7</option>
+			<option value="#SPLUS5ED245">G-KCDMG84 BSc in Computing and Digital Media
+ L8 Yr 4 Sem 8</option>
+			<option value="GA_KITAB_8GM47ITA8">G-KITAG84 BSc in Information Technology for Business L8 Yr 4 Sem 7</option>
+			<option value="GA_KITAB_8GM48ITA8">G-KITAG84 BSc in Information Technology for Business L8 Yr 4 Sem 8</option>
+			<option value="#SPLUSE3B3BF">G-KSOAG81 BSc (HONOURS) in Computing in Software Development L8 Yr 1 Sem</option>
+			<option value="#SPLUSE3B3BE">G-KSOAG81 BSc (HONOURS) in Computing in Software Development L8 Yr 1 Sem 2</option>
+			<option value="#SPLUS58465E">G-KSOAG82 BSc (HONOURS) in Computing in Software Development L8 Yr 2 Sem 3</option>
+			<option value="#SPLUS58465F">G-KSOAG82 BSc (HONOURS) in Computing in Software Development L8 Yr 2 Sem 4</option>
+			<option value="GA_KSOFG_B0712SOF7">G-KSOFG1 BSc in Computing in Software Development Yr 1 Sem 2</option>
+			<option value="GA_KSOFG_B0711SOF7">G-KSOFG71 BSc in Computing in Software Development L7 Yr 1 Sem 1</option>
+			<option value="GA_KSOFG_B0723SOF7">G-KSOFG72 BSc in Software Development L7 Yr 2 Sem 3</option>
+			<option value="GA_KSOFG_B0724SOF7">G-KSOFG72 BSc in Software Development L7 Yr 2 Sem 4</option>
+			<option value="GA_KSOFT_7GM35SOF7">G-KSOFG73 BSc in Computing in Software Development L7 Yr 3 Sem 5</option>
+			<option value="GA_KSOFT_7GM36SOF7">G-KSOFG73 BSc in Computing in Software Development L7 Yr 3 Sem 6</option>
+			<option value="GA_KSOFT_H0847SOF8">G-KSOFGH84 BSc in Software Development L8 Yr 4 Sem 7</option>
+			<option value="GA_KSOFT_8GM48SOF8">G-KSOFGH84 BSc in Software Development L8 Yr 4 Sem 8</option>
+			<option value="GA_KSOFG_L0847SOF8">G-KSOFGL84 HDip in Science Software Development L8 Yr 4  Jan-May2017</option>
+			<option value="#SPLUS77DC30">G-KSOFGL84 HDip in Science Software Development L8 Yr 4 Sept-Dec2017</option>
+			<option value="#SPLUS584660">G-KSOFN62 BSc in Computing in Software Development
+ L6 Yr 2 Sem 3</option>
+			<option value="#SPLUS584661">G-KSOFN62 BSc in Computing in Software Development
+ L6 Yr 2 Sem 4</option>
+			<option value="#SPLUSFDD4BF">G-KWEBG71 BSc in Web Technologies and Programming L7 Yr 1 Jan-May Sem 1</option>
+			<option value="#SPLUS382924">G-KWEBG71 BSc in Web Technologies and Programming L7 Yr 1 Sept-Dec Sem 2</option>
+
+		</select>

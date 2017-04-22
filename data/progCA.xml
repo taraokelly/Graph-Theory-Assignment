@@ -1,0 +1,29 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS5ECDEA">G-FCULI61 Certificate in Culinary Arts - Springboard L6 Yr 1 Sem 1</option>
+			<option value="#SPLUS7CAB5B">G-FCULI61 Certificate in Culinary Arts - Springboard L6 Yr 1 Sem 2</option>
+			<option value="#SPLUS58464A">G-FPCTG62 Advanced Certicate in Professional Cookery Traineeship L6 Yr 2</option>
+			<option value="GA_FPCTG_A06010COOE">G-FTICG61 Total Immersion Chefs Programme L6 Yr 1 Sem 1</option>
+			<option value="#SPLUSE101F3">G-FTICG61 Total Immersion Chefs Programme L6 Yr 1 Sem 2</option>
+			<option value="GA_OCULG_C0611CUL6">G-OCPCG61 HC in Arts in Culinary Arts - Professional Chef Programme 
+L6 Yr 1 Sem 1</option>
+			<option value="#SPLUSB71D67">G-OCPCG61 HC in Arts in Culinary Arts - Professional Chef Programme 
+L6 Yr 1 Sem 2</option>
+			<option value="#SPLUS584664">G-OCPCG62 HC in Arts in Culinary Arts - Professional Chef Programme 
+L6 Yr 2 Sem 3</option>
+			<option value="#SPLUS584665">G-OCPCG62 HC in Arts in Culinary Arts - Professional Chef Programme 
+L6 Yr 2 Sem 4</option>
+			<option value="GA_OCULG_B0711CUL7">G-OCULG71 BB in Culinary Arts L7 Yr 1 Sem 1</option>
+			<option value="GA_OCULG_B0712CUL7">G-OCULG71 BB in Culinary Arts L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS584668">G-OCULG72 BB in Culinary Arts L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS58466A">G-OCULG72 BB in Culinary Arts L7 Yr 2 Sem 4</option>
+			<option value="GA_OCULA_7GM30CUL7">G-OCULG73 BB in Culinary Arts L7 Yr 3 Sem 6</option>
+			<option value="GA_OCULG_H0847CUL8">G-OCULG84 BB in Culinary Arts L8 Yr 4 Sem 7</option>
+			<option value="#SPLUS95411B">G-OCULG84 BB in Culinary Arts L8 Yr 4 Sem 8</option>
+			<option value="#SPLUS301F95">G-OCUPG71 BA in Culinary Arts L7 Yr 1 Sem 1</option>
+			<option value="#SPLUSC0809B">G-OCUPG71 BA in Culinary Arts L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS04EEA8">G-OCUPG72 BA in Culinary Arts L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS08B495">G-OCUPG72 BA in Culinary Arts L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSFA0F4C">G-OCUPG73 BA in Culinary Arts L7 Yr 3 Sem 5</option>
+			<option value="#SPLUSAB0C47">G-OCUPG73 BA in Culinary Arts L7 Yr 3 Sem 6</option>
+
+		</select>

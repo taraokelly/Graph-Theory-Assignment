@@ -1,0 +1,32 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS2B583B">G-BACAG95 Assc of Chartered Certified Accountants Professional L9 Yr 5 Sem 09</option>
+			<option value="#SPLUS8E568C">G-BACAG95 Assc of Chartered Certified Accountants Professional L9 Yr 5 Sem 10</option>
+			<option value="GA_BACCG_H0811ACC8">G-BACCG81 BB in Accountancy L8 Yr 1 Sem 1</option>
+			<option value="GA_BACCG_H0812ACC8">G-BACCG81 BB in Accountancy L8 Yr 1 Sem 2</option>
+			<option value="GA_BACCG_H0823ACC8">G-BACCG82 BB in Accountancy L8 Yr 2 Sem 3</option>
+			<option value="GA_BACCG_H0824ACC8">G-BACCG82 BB in Accountancy L8 Yr 2 Sem 4</option>
+			<option value="GA_BACCG_H0835ACC8">G-BACCG83 BB in Accountancy L8 Yr 3 Sem 5</option>
+			<option value="GA_BACCG_H0836ACC8">G-BACCG83 BB in Accountancy L8 Yr 3 Sem 6</option>
+			<option value="#SPLUS6912FC">G-BACCG95 Post Graduate Diploma in Accounting L9 Yr 5 Sem 09</option>
+			<option value="#SPLUS6912FD">G-BACCG95 Post Graduate Diploma in Accounting L9 Yr 5 Sem 10</option>
+			<option value="GA_BADIS_7GM35ADI7">G-BADIG73 BB in Admin &amp; Info Systems L7 Yr 3 Sem 5</option>
+			<option value="GA_BADIS_7GM36ADI7">G-BADIG73 BB in Admin &amp; Info Systems L7 Yr 3 Sem 6</option>
+			<option value="#SPLUS4635A4">G-BBISG71 BSc in Business Information Systems L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS4635A5">G-BBISG71 BSc in Business Information Systems
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS584622">G-BBISG72 BSc in Business Information Systems L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS584623">G-BBISG72 BSc in Business Information Systems L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSA78A9C">G-BBISG81 BSc (Hons) in Business Information Systems
+ L8 Yr 1 Sem 1</option>
+			<option value="#SPLUS9BC3F7">G-BBISG81 BSc (Hons) in Business Information Systems
+ L8 Yr 1 Sem 2</option>
+			<option value="#SPLUSA29DBE">G-BBISG82 BSc (Hons) in Business Information Systems
+ L8 Yr 2 Sem 3</option>
+			<option value="#SPLUSA29DBF">G-BBISG82 BSc (Hons) in Business Information Systems
+ L8 Yr 2 Sem 4</option>
+			<option value="GA_BINAG_H080305">G-BINAG83 BA in Info Systems Mgmt L8 Yr 3 Sem 5</option>
+			<option value="#SPLUSC64C13">G-BINAG83 BA in Info Systems Mgmt L8 Yr 3 Sem 6</option>
+			<option value="GA_BINSM_8GM47INS8">G-BINSG84 BA in Information Systems Mgmt L8 Yr 4 Sem 7</option>
+			<option value="GA_BINSG_8GM48INS8">G-BINSG84 BA in Information Systems Mgmt L8 Yr 4 Sem 8</option>
+
+		</select>

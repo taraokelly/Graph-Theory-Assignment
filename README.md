@@ -287,17 +287,10 @@ CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}),
 (fri2)-[:AT]->(fri2t13);
 ```
 
-Create indexes.
+Load in courses from csv file.
 
 ```
-CREATE INDEX ON :Dept(name);
-CREATE INDEX ON :Course(name);
-CREATE INDEX ON :Group(name);
-CREATE INDEX ON :Lecture(name);
-CREATE INDEX ON :Module(name);
-CREATE INDEX ON :Room(name);
-CREATE INDEX ON :Time(name);
-CREATE INDEX ON :Day(name);
+USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///programmes.csv" as row create (:Course {name: row.course, code: row.code, campus: row.degree, year: "2017", sem:"2"});
 ```
 
 ## To Query Database

@@ -1,0 +1,33 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS4452B9">G-OBRMG73 BBs (Ordinary) Bar &amp; Restaurant Management
+ L7 Yr 3 Sem 6</option>
+			<option value="GA_OEVEG_B0712EVE7">G-OEVEG71 BB in Event Mgmt (with Public Relations) L7 Yr 1 Sem 2</option>
+			<option value="GA_OEVEG_B0723EVE7">G-OEVEG72 BB in Event Mgmt (with Public Relations) L7 Yr 2 Sem 3</option>
+			<option value="GA_OEVEG_B0724EVE7">G-OEVEG72 BB in Event Mgmt (with Public Relations) L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSE01D40">G-OEVEG73 BB in Event Mgmt (with Public Relations) L7 Yr 3 Sem 5</option>
+			<option value="#SPLUSE01D47">G-OEVEG73 BB in Event Mgmt (with Public Relations) L7 Yr 3 Sem 6</option>
+			<option value="GA_OEVEG_B0711EVE7">G-OEVEN71 BB in Event Mgmt (with Public Relations) L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS3868A0">G-OHCAG71 BB in Hotel and Catering Mgmt L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS3868F8">G-OHCAG71 BB in Hotel and Catering Mgmt L7 Yr 1 Sem 2</option>
+			<option value="GA_OHCAG_B0723HCA7">G-OHCAG72 BB in Hotel and Catering Mgmt L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS4452C1">G-OHCAG72 BB in Hotel and Catering Mgmt L7 Yr 2 Sem 4</option>
+			<option value="GA_OHCAT_7GM35HCA7">G-OHCAG73 BB in Hotel and Catering Mgmt L7 Yr 3 Sem 5</option>
+			<option value="GA_OHCAT_7GM36HCA7">G-OHCAG73 BB in Hotel and Catering Mgmt L7 Yr 3 Sem 6</option>
+			<option value="#SPLUS5E1580">G-OHCAG81 BA in Hotel and Catering Management L8 Yr 1 Sem 1</option>
+			<option value="#SPLUS3868FD">G-OHCAG81 BA in Hotel and Catering Management L8 Yr 1 Sem 2</option>
+			<option value="GA_OHCAG_H0823HCA8">G-OHCAG82 BA in Hotel and Catering Mgmt L8 Yr 2 Sem 3</option>
+			<option value="GA_OHCAG_H0824HCA8">G-OHCAG82 BA in Hotel and Catering Mgmt L8 Yr 2 Sem 4</option>
+			<option value="GA_OHCAT_8GM36HCA8">G-OHCAG83 BA in Hotel and Catering Mgmt L8 Yr 3 Sem 6</option>
+			<option value="GA_OHCAG_H0847HCA8">G-OHCAG84 BA in Hotel and Catering Mgmt L8 Yr 4 Sem 7</option>
+			<option value="GA_OHCAG_H0848HCA8">G-OHCAG84 BA in Hotel and Catering Mgmt L8 Yr 4 Sem 8</option>
+			<option value="#SPLUS58466B">G-OHOPG62 HC in Arts in Hotel and Hospitality Studies L6 Yr 2 Sem 3</option>
+			<option value="#SPLUS58466E">G-OHOPG62 HC in Arts in Hotel and Hospitality Studies L6 Yr 2 Sem 4</option>
+			<option value="#SPLUSB21144">G-OHOSG61 HC in Arts in Hotel and Hospitality Studies L6 Yr 1 Sem 1</option>
+			<option value="GA_OHOSG_C0612HOS6">G-OHOSG61 HC in Arts in Hotel and Hospitality Studies L6 Yr 1 Sem 2</option>
+			<option value="#SPLUS11EBFA">G-OREMG71 BB in Retail Mgmt L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS1AAF28">G-OREMG71 BB in Retail Mgmt L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS58466F">G-OREMG72 BB in Retail Mgmt L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS584672">G-OREMG72 BB in Retail Mgmt L7 Yr 2 Sem 4</option>
+			<option value="GA_ORETA_7GM36RET7">G-ORETG73 BB in Retail &amp; Customer Service Mgmt L7 Yr 3 Sem 6</option>
+
+		</select>

@@ -1,0 +1,45 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="CCONC_S06_Y1">MA- Cons SPA-CCONC_S06_Construction Management Yr1</option>
+			<option value="SAS_B7_Y1C">MA-ASC1_SCARC_B07  BA in Applied Social Studies L7 Yr 1</option>
+			<option value="SAPP_7_Y2C">MA-ASC2_SCARC_B07 BA in Applied Social Studies L7 Yr 2</option>
+			<option value="SAPP_7_Y3C">MA-ASC3_SASSC_B07 BA in Applied Social Studies L7 Yr 3</option>
+			<option value="SAS_H8_Y4C">MA-ASC4-SCARC_H08 Applied Social Studies L8 Yr 4</option>
+			<option value="#SPLUS0BA0E3">MA-BAFM1-BAFMCC71 BA in Accounting and Finance L7 Yr 1</option>
+			<option value="#SPLUS235020">MA-BAFM2-BACFA72 BA in Accounting &amp; Financial Mgmt L7 Yr 2</option>
+			<option value="BACF_7_Y3C">MA-BAFM3-BAFMC73 BA in Accounting &amp; Financial Mgmt (Add on) L7 Yr 3</option>
+			<option value="#SPLUS235021">MA-BAFM4-BACTC84 Bachelor of Business (Honours) in Accounting L8 Yr 4</option>
+			<option value="BBU_B7_Y1C">MA-BUS1-BBUSC71 BB in Business L7 Yr 1</option>
+			<option value="BBU_B7_Y2C">MA-BUS2-BBUSC72 BB in Business L7 Yr 2</option>
+			<option value="BBU_B7_Y3C">MA-BUS3_BBUSS_B07 BB in Business L7 Yr 3</option>
+			<option value="BBU_H8_Y4C">MA-BUS4-BBUSC84 Bachelor of Business L8 Yr 4</option>
+			<option value="BICT_C6_Y2C">MA-CA2 BICT62 HC in Computer Applications L6 Yr 2</option>
+			<option value="GA_CMRMC_B07_3">MA-CON3-CMRMC73 BSc in Construction Management in Refurbishment and Maintenance Yr 3</option>
+			<option value="#SPLUS018F46">MA-DigMe2-KDMSC_H08 BSc in Digital Media &amp; Society L8 Yr 2</option>
+			<option value="CBAR_GA_KDMSC_H08">MA-DigMe3-KDMSC_H08 BSc in Digital Media &amp; Society L8 Yr 3</option>
+			<option value="#SPLUSDBA73E">MA-DigMe4-KDMSC_H08 BSc in Digital Media &amp; Society L8 Yr 4</option>
+			<option value="#SPLUS0BA072">MA-Found-TFOUC_F05 Foundation Studies</option>
+			<option value="HRUH_7_Y2C">MA-Her2-HHERC71 BA in Humanities in Heritage Studies L7 Yr 2</option>
+			<option value="HRUH_7_Y3C">MA-Her3_HHERC_B07 BA in Humanities in Heritage Studies L7 Yr 3</option>
+			<option value="HHER_8Y4C">MA-Her4-HHERI84 BA in Heritage Studies L8 Yr 4</option>
+			<option value="#SPLUS5FB4C2">MA-HRM2-BHRMC72 BA in Human Resource Mgmt L7 Yr 2</option>
+			<option value="KIT_C6_Y1C">MA-ITS1-KITSC61 HC Science in Info Tech Support L6 Yr 1</option>
+			<option value="MY_KIT_C6_Y2C">MA-ITS2-KITSC62 HC Science in Info Tech Support L6 Yr 2</option>
+			<option value="KIT_B7_Y3C">MA-ITS3-KITAC73 BSc Computing in Info Tech Administration L7 Yr 3</option>
+			<option value="KCS_H8_Y4C">MA-ITS4-KCSMC84 BSc in Computer Service Mgmt L8 Yr 4</option>
+			<option value="SGN_H8_Y2C">MA-NGen2-SGENC82 BSc (Hons) in General Nursing Yr 2</option>
+			<option value="GA_SGENC_H08_Y3">MA-NGen3-SGENC83 BSc in General Nursing L8 Yr 3</option>
+			<option value="GA_SGENC_H08_Y4">MA-NGen4-SGENC84 BSc in General Nursing L8 Yr 4</option>
+			<option value="#SPLUSC2E65F">MA-NInt4-NNURSK84 Nursing International Program</option>
+			<option value="SPN_H8_Y1C">MA-NPsy1-SPSYC81 BSc in Psychiatric Nursing L8 Yr 1</option>
+			<option value="SPN_H8_Y2C">MA-NPsy2-SPSYC82 BSc (Hons) in Psychiatric Nursing Yr 2</option>
+			<option value="GA_SPSYC_H08_Y3">MA-NPsy3-SPSYC83 BSc in Psychiatric Nursing Yr 3</option>
+			<option value="GA_SPSYC_H08_Y4">MA-NPsy4-SPSYC83 BSc in Psychiatric Nursing Yr 4</option>
+			<option value="#SPLUS5FB538">MA-N-SECHC Early Childhood Education and Care</option>
+			<option value="HOE_B7_Y1C">MA-OE1-HOELC71 BA in Outdoor Education &amp; Leisure L7 Yr 1</option>
+			<option value="HOE_B7_Y2C">MA-OE2-HOELC72 BA in Outdoor Education &amp; Leisure L7 Yr 2</option>
+			<option value="HOUT_7_Y3C">MA-OE3-HOELC73 BA in Outdoor Education and Leisure L7 Yr 3</option>
+			<option value="#SPLUS5FB513">MA-SUPMAN1-BSVMC71 Supervisory Management  Yr 1</option>
+			<option value="HOE_H8_Y4C">M-HOEDC84 BA in Outdoor Education &amp; Leisure L8 Yr 4</option>
+			<option value="SGN_H8_Y1C">M-NGen1-SGENC81 BSc in General Nursing L8 Yr 1</option>
+
+		</select>

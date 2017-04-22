@@ -1,0 +1,41 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS5ED21B">G-EENEG1-F BEng in Energy Eng Gr F Yr 1 Sem 1</option>
+			<option value="#SPLUS961C9F">G-EENEG1-H BEng in Energy Eng Gr H Yr 1 Sem 1</option>
+			<option value="#SPLUS961CA3">G-EENEG2 BEng in Energy Eng Yr 2 Sem 3</option>
+			<option value="#SPLUS961C9B">G-EENEG3 BEng in Energy Eng Yr 3 Sem 5</option>
+			<option value="#SPLUSCF6AE6">G-EENEG71-A BEng in Energy Eng Gr F L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSCF6AE7">G-EENEG71-B BEng in Energy Eng Gr H L7 Yr 1 Sem 2</option>
+			<option value="GA_EENEG_B0724ENE7">G-EENEG72-A BEng in Energy Eng Gr A L7 Yr 2 Sem 4</option>
+			<option value="GA_EENEG_B0736ENE7">G-EENEG73-A BEng in Energy Eng Gr A L7 Yr 3 Sem 6</option>
+			<option value="GA_EENEG_H0847ENE8">G-EENEG84 BEng in Energy Eng L8 Yr 4 Sem 7</option>
+			<option value="GA_EENEG_H0848ENE8">G-EENEG84 BEng in Energy Eng L8 Yr 4 Sem 8</option>
+			<option value="#SPLUS961C9C">G-EMECG1-A BEng in Mechanical Eng Gr A Yr 1 Sem 1</option>
+			<option value="#SPLUS961CA7">G-EMECG1-B BEng in Mechanical Eng Gr B Yr 1 Sem 1</option>
+			<option value="#SPLUS75C31B">G-EMECG1-C BEng in Mechanical Eng Gr C Yr 1 Sem 1</option>
+			<option value="#SPLUS75C31C">G-EMECG1-D BEng in Mechanical Eng Gr D Yr 1 Sem 1</option>
+			<option value="#SPLUS75C364">G-EMECG1-E BEng in Mechanical Eng Gr E Yr 1 Sem 1</option>
+			<option value="#SPLUS3B976D">G-EMECG1-F BEng in Mechanical Eng Gr F Yr 1 Sem 1</option>
+			<option value="#SPLUS961C9E">G-EMECG3-A BEng in Mechanical Eng Gr A Yr 3 Sem 5</option>
+			<option value="#SPLUS961CAB">G-EMECG3-B BEng in Mechanical Eng Gr B Yr 3 Sem 5</option>
+			<option value="#SPLUSFFBE56">G-EMECG3-C BEng in Mechanical Eng Gr C Yr 3 Sem 5</option>
+			<option value="GA_EMECG_B0712MEC7">G-EMECG71-A BEng in Mechanical Eng Gr A L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSCF6AF3">G-EMECG71-B BEng in Mechanical Eng Gr B L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS75C31F">G-EMECG71-C BEng in Mechanical Eng Gr C L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS75C320">G-EMECG71-D BEng in Mechanical Eng Gr D L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS75C365">G-EMECG71-E BEng in Mechanical Eng Gr E L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS961C9D">G-EMECG72-A BEng in Mechanical Eng Gr A L7 Yr 2 Sem 3</option>
+			<option value="GA_EMECG_B0724MEC7">G-EMECG72-A BEng in Mechanical Eng Gr A L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS961CA9">G-EMECG72-B BEng in Mechanical Eng Gr B L7 Yr 2 Sem 3</option>
+			<option value="#SPLUSCF6AF5">G-EMECG72-B BEng in Mechanical Eng Gr B L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSC12F3B">G-EMECG72-C BEng in Mechanical Eng Gr C L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS2F72D0">G-EMECG72-C BEng in Mechanical Eng Gr C L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS1A9E1B">G-EMECG72-D BEng in Mechanical Eng Gr D L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS4D2622">G-EMECG72-D BEng in Mechanical Eng Gr D L7 Yr 2 Sem 4</option>
+			<option value="GA_EMECH_7GM36MEC7">G-EMECG73-A BEng in Mechanical Eng Gr A L7 Yr 3 Sem 6</option>
+			<option value="#SPLUSCF6AF7">G-EMECG73-B BEng in Mechanical Eng Gr B L7 Yr 3 Sem 6</option>
+			<option value="#SPLUSFFBE6B">G-EMECG73-C BEng in Mechanical Eng Gr C L7 Yr 3 Sem 6</option>
+			<option value="GA_EMECG_H0847MEC8">G-EMECG84 BEng in Mechanical Eng L8 Yr 4 Sem 7</option>
+			<option value="GA_EMECG_H0848MEC8">G-EMECG84 BEng in Mechanical Eng L8 Yr 4 Sem 8</option>
+			<option value="FS_EMOME_TGA60F050">G-EMOME6 NCC in Motor Engineering Phase 6</option>
+
+		</select>

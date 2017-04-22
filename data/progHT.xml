@@ -1,0 +1,29 @@
+ <select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="GA_HHERG_B0711HER7">G-HHERG71 BA in Heritage Studies L7 Yr 1 Sem 1</option>
+			<option value="GA_HHERG_B0712HER7">G-HHERG71 BA in Heritage Studies L7 Yr 1 Sem 2</option>
+			<option value="GA_HHERI_7GM23HER7">G-HHERG72 BA in Heritage Studies L7 Yr 2 Sem 3</option>
+			<option value="GA_HHERI_7GM24HER7">G-HHERG72 BA in Heritage Studies L7 Yr 2 Sem 4</option>
+			<option value="GA_HHERG_7GM35HER7">G-HHERG73 BA in Heritage Studies L7 Yr 3 Sem 5</option>
+			<option value="GA_HHERG_7GM36HER7">G-HHERG73 BA in Heritage Studies L7 Yr 3 Sem 6</option>
+			<option value="#SPLUS184414">G-HHERG81 BA in Heritage Studies L8 Yr 1 Sem 1</option>
+			<option value="#SPLUS184415">G-HHERG81 BA in Heritage Studies L8 Yr 1 Sem 2</option>
+			<option value="GA_HHERG_H0823HERG">G-HHERG82 BA in Heritage Studies L8 Yr 2 Sem 3</option>
+			<option value="GA_HHERG_H0824HERG">G-HHERG82 BA in Heritage Studies L8 Yr 2 Sem 4</option>
+			<option value="GA_HHERG_HO830HERD">G-HHERG83 BA in Heritage Studies L8 Yr 3 Sem 5</option>
+			<option value="#SPLUS2E2364">G-HHERG83 BA in Heritage Studies L8 Yr 3 Sem 6</option>
+			<option value="GA_HHERG_8GM47HER8">G-HHERG84 BA in Heritage Studies L8 Yr 4 Sem 7</option>
+			<option value="GA_HHERG_8GM48HER8">G-HHERG84 BA in Heritage Studies L8 Yr 4 Sem 8</option>
+			<option value="#SPLUSA78A91">G-HRELG72 BA in Religious Studies L7 Yr 2 Sem3</option>
+			<option value="#SPLUSA78A97">G-HRELG72 BA in Religious Studies L7 Yr 2 Sem4</option>
+			<option value="GA_OTOUG_C0611TOU6">G-OTOUG61 HC in Business in Tourism L6 Yr 1 Sem 1</option>
+			<option value="GA_OTOUG_C0623TOU6">G-OTOUG62 HC in Business in Tourism L6 Yr 2 Sem 3</option>
+			<option value="GA_OTOUG_C0624TOU6">G-OTOUG62 HC in Business in Tourism L6 Yr 2 Sem 4</option>
+			<option value="GA_OTOUG_B0711TOM7">G-OTOUG71 BB in Tourism Mgmt L7 Yr 1 Sem 1</option>
+			<option value="GA_OTOUG_B0712TOM7">G-OTOUG71 BB in Tourism Mgmt L7 Yr 1 Sem 2</option>
+			<option value="GA_OTOUG_B0723TOM7">G-OTOUG72 BB in Tourism Mgmt L7 Yr 2 Sem 3</option>
+			<option value="GA_OTOUG_B0724TOM7">G-OTOUG72 BB in Tourism Mgmt L7 Yr 2 Sem 4</option>
+			<option value="GA_OTOUR_7GM35TOM7">G-OTOUG73 BB in Tourism Mgmt L7 Yr 3 Sem 5</option>
+			<option value="GA_OTOUR_7GM36TOM7">G-OTOUG73 BB in Tourism Mgmt L7 Yr 3 Sem 6</option>
+			<option value="#SPLUSC12F1F">G-SMHMG59 The Research Cycle: Theory and Practice Yr 5 Sem 9</option>
+
+		</select>

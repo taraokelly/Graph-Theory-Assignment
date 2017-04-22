@@ -1,0 +1,31 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS1639D2">L-AEDUL84 Prof Dipl in Ed (Construction Studies/Design/Comm Graphics) L8 Yr 4</option>
+			<option value="#SPLUSFD13B2">L-SDETL81 BSc in Design &amp; Technical Education (Honours) L8 Yr 1</option>
+			<option value="#SPLUSFD13B3">L-SDETL82 BSc in Design &amp; Technical Education (Honours) L8 Yr 2</option>
+			<option value="GA_SDETL_8LM30DET8">L-SDETL83 BSc in Design &amp; Technical Education L8 Yr 3</option>
+			<option value="GA_SDETL_8LM40DET8">L-SDETL84 BSc in Design &amp; Technical Education L8 Yr 4</option>
+			<option value="#SPLUSFD13AE">L-SFDAL81-1 BSc in Furniture Design and Manufacture (Honours) L8 Yr 1 Gr 1</option>
+			<option value="#SPLUS8E8E6B">L-SFDAL81-2 BSc in Furniture Design and Manufacture (Honours) L8 Yr 1 Gr2</option>
+			<option value="#SPLUS9B1AEF">L-SFDAL82-1 BSc in Furniture Design and Manufacture (Honours) L8 Yr 2 Gr 1</option>
+			<option value="#SPLUS9B1AF0">L-SFDAL82-2 BSc in Furniture Design and Manufacture (Honours) L8 Yr 2 Gr 2</option>
+			<option value="#SPLUS1AE0DE">L-SFDAL83-1 L8 Yr 3</option>
+			<option value="#SPLUS1AE0E0">L-SFDAL83-1 L8 Yr 3</option>
+			<option value="#SPLUSFD13A7">L-SFUDL71-1 BSc in Furniture Design and Manufacture L7 Yr 1 Gr1</option>
+			<option value="#SPLUS8E8E6C">L-SFUDL71-2 BSc in Furniture Design and Manufacture L7 Yr 1 Gr2</option>
+			<option value="#SPLUSFD13A8">L-SFUDL72-1 BSc in Furniture Design and Manufacture L7 Yr 2 Gr 1</option>
+			<option value="#SPLUS9B1AEE">L-SFUDL72-2 BSc in Furniture Design and Manufacture L7 Yr 2 Gr 2</option>
+			<option value="#SPLUSFD13EF">L-SFUDL73 BSc in Furniture Design and Manufacture L7  Yr 3 Gr 1</option>
+			<option value="#SPLUSE7AFB1">L-SFUDL73 BSc in Furniture Design and Manufacture L7 Yr 3 Gr 2</option>
+			<option value="#SPLUSE40963">L-SFUDL81-1 BSc (Honours) in Furniture Design and Manufacture L8 Yr 1 Gr1</option>
+			<option value="#SPLUSE40964">L-SFUDL81-2 BSc (Honours) in Furniture Design and Manufacture L8 Yr 1 Grr2</option>
+			<option value="#SPLUSE40969">L-SFUDL82-1 BSc in Furniture Design and Manufacture L8 Yr 2 Gr 1</option>
+			<option value="#SPLUSE40968">L-SFUDL82-1 BSc in Furniture Design and Manufacture L8 Yr 2 Gr 1</option>
+			<option value="#SPLUSE40971">L-SFUDL83 BSc in Furniture Design and Manufacture L8  Yr 3 Gr 1</option>
+			<option value="#SPLUSE40970">L-SFUDL83 BSc in Furniture Design and Manufacture L8  Yr 3 Gr 1</option>
+			<option value="#SPLUSFD13AD">L-SFUDL84 BSc in Furniture Design and Manufacture (Honours) L8 Yr 4</option>
+			<option value="#SPLUSFD13AA">L-SFUWL71 BSc in Furniture &amp; Wood Technology L7 Yr 1</option>
+			<option value="#SPLUSFD13AB">L-SFUWL72 BSc in Furniture &amp; Wood Technology L7 Yr 2</option>
+			<option value="GA_SFUWL_H0840FUW8">L-SFUWL83 BSc in Furniture &amp; Wood Technology (Honours) L8 Yr 3</option>
+			<option value="#SPLUS9C5531">L-SFUWL84 BSc in Furniture &amp; Wood Technology (Honours) L8 Yr 4</option>
+
+		</select>

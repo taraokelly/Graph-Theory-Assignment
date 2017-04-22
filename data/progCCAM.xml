@@ -1,0 +1,74 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUSE1020B">G-AARPG74 BA in Art &amp; Design Flexible Mode Yr 4</option>
+			<option value="#SPLUS6D0DDD">G-AARPG75 BA in Art &amp; Design Flexible Mode Yr 5</option>
+			<option value="#SPLUSE1020A">G-AARPG76 BA in Art &amp; Design Flexible Mode Yr 6</option>
+			<option value="AARTG_B070300">G-AARTG73 BA in Art &amp; Design Ceramics L7 Yr 3</option>
+			<option value="GA_AARTG_7GM35ART7">G-AARTG73 BA in Art &amp; Design Painting L7 Yr 3</option>
+			<option value="#SPLUS5731CB">G-AARTG73 BA in Art &amp; Design Printmaking L7 Yr 3</option>
+			<option value="#SPLUS5731CD">G-AARTG73 BA in Art &amp; Design Sculpture L7 Yr 3</option>
+			<option value="#SPLUS5731CE">G-AARTG73 BA in Art &amp; Design Textiles L7 Yr 3</option>
+			<option value="#SPLUSD24B35">G-ACONG71 Gr A BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DDE">G-ACONG71 Gr B BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DDF">G-ACONG71 Gr C BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DE7">G-ACONG71 Gr C BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSFE0B89">G-ACONG72 BA in Contemporary Art  Gr B L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS5845F1">G-ACONG72 BA in Contemporary Art
+ Gr A L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS5845F2">G-ACONG72 BA in Contemporary Art
+ L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSFE0B9B">G-ACONG72 BA in Contemporary Art
+ L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSFE0B99">G-ACONG72 BA in Contemporary Art
+ L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS58460B">G-ACONG82 BA (Honours) in Contemporary Art
+ L8 Yr 2 Sem 4</option>
+			<option value="#SPLUSD24B36">G-ACONGG71 Gr A BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS6D0DE6">G-ACONGG71 Gr B BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSD3F653">G-ACREG95 MA-CP-1</option>
+			<option value="#SPLUS72285B">G-ACREG95 MA-CP-2</option>
+			<option value="#SPLUS72285C">G-ACREG95 MA-CP-3</option>
+			<option value="#SPLUS72285D">G-ACREG95 MA-CP-4</option>
+			<option value="#SPLUS573247">G-AFING84 BA in Fine Art Ceramics L8 Yr 4</option>
+			<option value="#SPLUS573248">G-AFING84 BA in Fine Art Painting L8 Yr 4</option>
+			<option value="#SPLUS573249">G-AFING84 BA in Fine Art Printmaking L8 Yr 4</option>
+			<option value="#SPLUS57324A">G-AFING84 BA in Fine Art Sculpture L8 Yr 4</option>
+			<option value="#SPLUS6D0DE0">G-DDESG71 Gr D BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DE8">G-DDESG71 Gr D BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS6D0DE3">G-DDESG71 Gr E BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DE9">G-DDESG71 Gr E BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUS6D0DE4">G-DDESG71 Gr F BA in Contemporary Art
+ L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS6D0DEA">G-DDESG71 Gr F BA in Contemporary Art
+ L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSFE0B9A">G-DDESG72 BA in Contemporary Art
+ L7 Yr 2 Sem 4</option>
+			<option value="#SPLUSFE0B8A">G-DDESG72 Gr C BA in Contemporary Art
+ L7 Yr 2 Sem 3</option>
+			<option value="#SPLUSFE0B8B">G-DDESG72 Gr D BA in Contemporary Art
+ L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS50758F">G-DTEXT84 BA in Honours in Design in Textiles L8 Yr 4</option>
+			<option value="#SPLUS522D51">G-HFILG81 BA (Honours) in Film &amp; Documentary L8 Yr 1 Sem 1</option>
+			<option value="#SPLUSAC9602">G-HFILG81A BA (Honours) in Film &amp; Documentary L8 Yr 1 Sem 2</option>
+			<option value="#SPLUSD1BAB3">G-HFILG81B BA (Honours) in Film &amp; Documentary L8 Yr 1 Sem 2</option>
+			<option value="#SPLUSD1BABC">G-HFILG81C BA (Honours) in Film &amp; Documentary L8 Yr 1 Sem 2</option>
+			<option value="#SPLUSAC9611">G-HFILG82 BA (Honours) in Film &amp; Documentary L8 Yr 2 Sem 3</option>
+			<option value="#SPLUSAC9612">G-HFILG82 Gr A BA (Honours) in Film &amp; Documentary L8 Yr 2 Sem 4</option>
+			<option value="#SPLUSCAE9B3">G-HFILG82 Gr B BA (Honours) in Film &amp; Documentary L8 Yr 2 Sem 4</option>
+			<option value="#SPLUSCAE9B4">G-HFILG82 Gr C BA (Honours) in Film &amp; Documentary L8 Yr 2 Sem 4</option>
+			<option value="#SPLUSA78ADE">G-HFILG83 BA (Honours) in Film &amp; Documentary L8 Yr 3 Sem 5</option>
+			<option value="#SPLUSAC964D">G-HFITG83 Gr A BA in Film &amp; TV L8 Yr 3 Sem 6</option>
+			<option value="#SPLUSCAE9CB">G-HFITG83 Gr B BA in Film &amp; TV L8 Yr 3 Sem 6</option>
+			<option value="#SPLUSCAE9CC">G-HFITG83 Gr C BA in Film &amp; TV L8 Yr 3 Sem 6</option>
+			<option value="#SPLUSCAE9E4">G-HFITG83 Gr D BA in Film &amp; TV L8 Yr 3 Sem 6</option>
+
+		</select>

@@ -1,0 +1,37 @@
+<select size="5" name="dlObject" multiple="multiple" id="dlObject" class="DepartmentFilter">
+			<option value="#SPLUS067B6B">G-CELEC1-4A National Advanced Craft Certificate in Electrical Installation 4A</option>
+			<option value="#SPLUS067B6C">G-CELEC1-4B National Advanced Craft Certificate in Electrical Installation 4B</option>
+			<option value="#SPLUSBA9326">G-CELEC2-6A National Advanced Craft Certificate in Electrical Installation 6A</option>
+			<option value="#SPLUS857533">G-CELEC2-6B National Advanced Craft Certificate in Electrical Installation 6B</option>
+			<option value="GA_ECOEG_H0840COE8">G-ECOEG84 BEng Computer &amp; Electronic Eng L8 Yr 4</option>
+			<option value="#SPLUS23A87D">G-ECOEG85 BEng Computer &amp; Electronic Eng L8 Yr 5 Sem 10</option>
+			<option value="#SPLUS23A877">G-ECOEG85 BEng Computer &amp; Electronic Eng L8 Yr 5 Sem 9</option>
+			<option value="GA_ECOLG_B0711CES7">G-ECOLG71-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 1 Sem 1</option>
+			<option value="GA_ECOLG_B0712CES7">G-ECOLG71-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSE7282A">G-ECOLG71-B BEng Computer &amp; Electronic Eng Gr B L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS56515E">G-ECOLG71-B2 BEng Computer &amp; Electronic Eng Gr B L7 Yr 1 Sem 2</option>
+			<option value="GA_ECOLG_B0711COE7">G-ECOLG71-C BEng Computer &amp; Electronic Eng Gr C L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS961CAF">G-ECOLG71-C BEng Computer &amp; Electronic Eng Gr C L7 Yr 1 Sem 2</option>
+			<option value="#SPLUSD6CBC0">G-ECOLG72-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS32E2C5">G-ECOLG72-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS52AAD3">G-ECOLG72-B BEng Computer &amp; Electronic Eng Gr B L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS961CB0">G-ECOLG72-B BEng Computer &amp; Electronic Eng Gr B L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS52AAD5">G-ECOLG72-C BEng Computer &amp; Electronic Eng Gr C L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS482808">G-ECOLG72-C BEng Computer &amp; Electronic Eng Gr C L7 Yr 2 Sem 4</option>
+			<option value="#SPLUS22EB92">G-ECOLG73-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 3 Sem 5</option>
+			<option value="#SPLUS07E554">G-ECOLG73-A BEng Computer &amp; Electronic Eng Gr A L7 Yr 3 Sem 6</option>
+			<option value="#SPLUS52AAD7">G-ECOLG73-B BEng Computer &amp; Electronic Eng Gr B L7 Yr 3 Sem 5</option>
+			<option value="#SPLUS961CB1">G-ECOLG73-B BEng Computer &amp; Electronic Eng Gr B L7 Yr 3 Sem 6</option>
+			<option value="#SPLUS2EF9C9">G-EINAG71 SPA Certificate in Industrial Automation L7 Yr 1</option>
+			<option value="#SPLUS2EF9CC">G-EINAG72 SPA Certificate in Industrial Automation L7 Yr 2</option>
+			<option value="#SPLUSF3F806">G-EITNG71 Certificate in IT Networking L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS7CAB5D">G-EITNG71 Certificate in IT Networking L7 Yr 1 Sem 1</option>
+			<option value="#SPLUS7CAB5E">G-EITNG72 Certificate in IT Networking L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS0E51C9">G-EITNG72 Certificate in IT Networking L7 Yr 2 Sem 3</option>
+			<option value="#SPLUS39CBC4">G-ESAEG71 BEng in Electrical Services &amp; Automation Eng L7 Yr 1</option>
+			<option value="#SPLUSF73BC7">G-ESAEG72 BEng in Electrical Services &amp; Automation Eng L7 Yr 2 Sem 3</option>
+			<option value="#SPLUSF73BD7">G-ESAEG72 BEng in Electrical Services &amp; Automation Eng L7 Yr 2 Sem 4</option>
+			<option value="GA_ESAEG_B0735ESAE">G-ESAEG73 BEng in Electrical Services &amp; Automation Eng L7 Yr 3 Sem 5</option>
+			<option value="GA_ESAEG_B0736ESAE">G-ESAEG73 BEng in Electrical Services &amp; Automation Eng L7 Yr 3 Sem 6</option>
+
+		</select>
