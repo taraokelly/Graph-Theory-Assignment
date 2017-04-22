@@ -90,10 +90,61 @@ CREATE INDEX ON :Day(name);
 
 ### Creating Year Template:
 
-Start with creating the academic year, adding the days and creating the relationship between them for each semester.
+Start with creating the academic year, adding the days and departments, and creating the necessary relationships between them for each semester.
  
 ```
-CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}), (tue1:Day {name:"Tuesday"}), (wed1:Day {name:"Wednesday"}), (thu1:Day {name:"Thursday"}), (fri1:Day {name:"Friday"}), (mon2:Day {name:"Monday"}), (tue2:Day {name:"Tuesday"}), (wed2:Day {name:"Wednesday"}), (thu2:Day {name:"Thursday"}), (fri2:Day {name:"Friday"}), (year)-[:SEM_1]->(tue1), (year)-[:SEM_1]->(wed1), (year)-[:SEM_1]->(thu1), (year)-[:SEM_1]->(fri1), (year)-[:SEM_2]->(mon2), (year)-[:SEM_2]->(tue2), (year)-[:SEM_2]->(wed2), (year)-[:SEM_2]->(thu2), (year)-[:SEM_2]->(fri2);
+CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}),
+(tue1:Day {name:"Tuesday"}), (wed1:Day {name:"Wednesday"}),
+(thu1:Day {name:"Thursday"}), (fri1:Day {name:"Friday"}),
+(mon2:Day {name:"Monday"}), (tue2:Day {name:"Tuesday"}),
+(wed2:Day {name:"Wednesday"}), (thu2:Day {name:"Thursday"}), 
+(fri2:Day {name:"Friday"}),
+(d1s1:Dept {name:"Centre for the Creative Arts and Media", campus:"Galway"}),
+(d2s1:Dept {name:"Dept of Building and Civil Engineering", campus:"Galway"}), 
+(d3s1:Dept {name:"Dept of Computer Science & Applied Physics", campus:"Galway"}), 
+(d4s1:Dept {name:"Dept of Culinary Arts", campus:"Galway"}), 
+(d5s1:Dept {name:"Dept of Electronic and Electrical Engineering", campus:"Galway"}), 
+(d6s1:Dept {name:"Dept of Heritage and Tourism", campus:"Galway"}), 
+(d7s1:Dept {name:"Dept of Life and Physical Sciences", campus:"Galway"}), 
+(d8s1:Dept {name:"Dept of Mechanical and Industrial Engineering", campus:"Galway"}), 
+(d9s1:Dept {name:"Dept of Service Industries", campus:"Galway"}), 
+(d10s1:Dept {name:"School of Business - Department of Accounting & Information Systems", campus:"Galway"}), 
+(d11s1:Dept {name:"School of Business - Department of Management", campus:"Galway"}),
+(d12s1:Dept {name:"National Centre for Excellence in Furniture Design and Technology", campus:"Letterfrack"}), 
+(d13s1:Dept {name:"Mayo Campus", campus:"Mayo"}),
+(d1s2:Dept {name:"Centre for the Creative Arts and Media", campus:"Galway"}),
+(d2s2:Dept {name:"Dept of Building and Civil Engineering", campus:"Galway"}), 
+(d3s2:Dept {name:"Dept of Computer Science & Applied Physics", campus:"Galway"}), 
+(d4s2:Dept {name:"Dept of Culinary Arts", campus:"Galway"}), 
+(d5s2:Dept {name:"Dept of Electronic and Electrical Engineering", campus:"Galway"}), 
+(d6s2:Dept {name:"Dept of Heritage and Tourism", campus:"Galway"}), 
+(d7s2:Dept {name:"Dept of Life and Physical Sciences", campus:"Galway"}), 
+(d8s2:Dept {name:"Dept of Mechanical and Industrial Engineering", campus:"Galway"}), 
+(d9s2:Dept {name:"Dept of Service Industries", campus:"Galway"}), 
+(d10s2:Dept {name:"School of Business - Department of Accounting & Information Systems", campus:"Galway"}), 
+(d11s2:Dept {name:"School of Business - Department of Management", campus:"Galway"}),
+(d12s2:Dept {name:"National Centre for Excellence in Furniture Design and Technology", campus:"Letterfrack"}), 
+(d13s2:Dept {name:"Mayo Campus", campus:"Mayo"}),
+(year)-[:SEM_1]->(mon1),(year)-[:SEM_1]->(tue1),  
+(year)-[:SEM_1]->(wed1), (year)-[:SEM_1]->(thu1), 
+(year)-[:SEM_1]->(fri1), (year)-[:SEM_2]->(mon2), 
+(year)-[:SEM_2]->(tue2), (year)-[:SEM_2]->(wed2), 
+(year)-[:SEM_2]->(thu2), (year)-[:SEM_2]->(fri2),
+(year)-[:SEM_1]->(d1s1), (year)-[:SEM_1]->(d2s1), 
+(year)-[:SEM_1]->(d3s1), (year)-[:SEM_1]->(d4s1), 
+(year)-[:SEM_1]->(d5s1), (year)-[:SEM_1]->(d6s1),
+(year)-[:SEM_1]->(d7s1), (year)-[:SEM_1]->(d8s1), 
+(year)-[:SEM_1]->(d9s1), (year)-[:SEM_1]->(d10s1), 
+(year)-[:SEM_1]->(d11s1), (year)-[:SEM_1]->(d12s1),
+(year)-[:SEM_1]->(d13s1),
+(year)-[:SEM_2]->(thu2), (year)-[:SEM_2]->(fri2),
+(year)-[:SEM_1]->(d1s2), (year)-[:SEM_1]->(d2s2), 
+(year)-[:SEM_1]->(d3s2), (year)-[:SEM_1]->(d4s2), 
+(year)-[:SEM_1]->(d5s2), (year)-[:SEM_1]->(d6s2),
+(year)-[:SEM_1]->(d7s2), (year)-[:SEM_1]->(d8s2), 
+(year)-[:SEM_1]->(d9s2), (year)-[:SEM_1]->(d10s2), 
+(year)-[:SEM_1]->(d11s2), (year)-[:SEM_1]->(d12s2),
+(year)-[:SEM_1]->(d13s2);
 ```
 
 Create indexes.
