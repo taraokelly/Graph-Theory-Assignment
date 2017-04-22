@@ -38,7 +38,8 @@ for child in root:
         else:
             if s[4] == "L8":
                 row = [s[0] + " " + s[4] + " " + s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
-            row = [s[4] + " " + s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
+            else:
+                row = [s[4] + " " + s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
     elif s[1] == "SPA" or s[1] == "Higher" or s[1] == "Advanced" or s[1] == "Prof" or s[1] == "Post":
         s = child.text.split(" ", 4)
         if s[3] == "in":
