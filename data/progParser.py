@@ -1,6 +1,15 @@
 import xml.etree.ElementTree as ET
 import csv
 
+'''
+Tara O'Kelly - G00322214,
+Graph Theory Assignment,
+Third Year, Graph Theory, Software Development.
+
+A program to parse the xml file with data taken from http://timetable.gmit.ie/.
+
+'''
+
 # adapted from https://docs.python.org/3/library/xml.etree.elementtree.html
 
 tree = ET.parse('prog.xml')
@@ -27,6 +36,8 @@ for child in root:
         if s[4] == "in":
             row = [s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
         else:
+            if s[4] == "L8":
+                row = [s[0] + " " + s[4] + " " + s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
             row = [s[4] + " " + s[5], s[0], s[1] + " " + s[2] +  " " + s[3]]
     elif s[1] == "SPA" or s[1] == "Higher" or s[1] == "Advanced" or s[1] == "Prof" or s[1] == "Post":
         s = child.text.split(" ", 4)
