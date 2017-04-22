@@ -88,6 +88,27 @@ CREATE INDEX ON :Time(name);
 CREATE INDEX ON :Day(name);
 ```
 
+### Creating Year Template:
+
+Start with creating the academic year, adding the days and creating the relationship between them for each semester.
+ 
+```
+CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}), (tue1:Day {name:"Tuesday"}), (wed1:Day {name:"Wednesday"}), (thu1:Day {name:"Thursday"}), (fri1:Day {name:"Friday"}), (mon2:Day {name:"Monday"}), (tue2:Day {name:"Tuesday"}), (wed2:Day {name:"Wednesday"}), (thu2:Day {name:"Thursday"}), (fri2:Day {name:"Friday"}), (year)-[:SEM_1]->(tue1), (year)-[:SEM_1]->(wed1), (year)-[:SEM_1]->(thu1), (year)-[:SEM_1]->(fri1), (year)-[:SEM_2]->(mon2), (year)-[:SEM_2]->(tue2), (year)-[:SEM_2]->(wed2), (year)-[:SEM_2]->(thu2), (year)-[:SEM_2]->(fri2);
+```
+
+Create indexes.
+
+```
+CREATE INDEX ON :Dept(name);
+CREATE INDEX ON :Course(name);
+CREATE INDEX ON :Group(name);
+CREATE INDEX ON :Lecture(name);
+CREATE INDEX ON :Module(name);
+CREATE INDEX ON :Room(name);
+CREATE INDEX ON :Time(name);
+CREATE INDEX ON :Day(name);
+```
+
 ## To Query Database
 
 ### Student Timetable:
