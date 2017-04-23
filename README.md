@@ -552,7 +552,7 @@ MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Crea
 ```
 
 ## Conclusion
-This assignment has been overall, a learned experience. If I were to design another graph database in Neo4j, I would have a better idea of how to design and structure the nodes, edges and properties that compose the database. And if I were to redo this project, I would place the group node **after** the module, and manage my time more eficiently.
+This assignment has been overall, a learned experience. If I were to design another graph database in Neo4j, I would have a better idea of how to design and structure the nodes, edges and properties that compose the database. And if I were to redo this project, I would **place the group node after the module**, and manage my time more efficiently.
 
 **References:**
 
