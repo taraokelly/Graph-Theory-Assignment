@@ -366,11 +366,72 @@ Add groups to course.
 ```
 MATCH (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(course:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})
 CREATE (a:Group{name:"A"}), (b:Group{name:"B"}), 
-(c:Group{name:"C"}), (all:Group{name:"ALL"})
+(c:Group{name:"C"})
 MERGE (course)-[:GROUP]->(a)
 MERGE (course)-[:GROUP]->(b)
-MERGE (course)-[:GROUP]->(c)
-MERGE (course)-[:GROUP]->(all);
+MERGE (course)-[:GROUP]->(c);
+```
+
+Add modules and corresponding relationships to course.
+
+```
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(c:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(g:Group{name:"C"}), 
+(d)-[:HAS]->(IM:Lecturer {name:"Ian Mc Loughlin"}),
+(d)-[:HAS]->(DOD:Lecturer {name:"Deirdre O'Donovan"}),
+(d)-[:HAS]->(MH:Lecturer {name:"Martin Hynes"}),
+(d)-[:HAS]->(DC:Lecturer {name:"Damien Costello"}),
+(d)-[:HAS]->(GH:Lecturer {name:"Gerard Harrison"})
+CREATE (GT:Module {name:"Graph Theory"}),
+(DMS:Module {name:"Database Mgmt Sys"}),
+(MA:Module {name:"Mobile Apps"}),
+(SSR:Module {name:"Server Side RAD"}),
+(ST:Module {name:"Software Testing"}),
+(PPIT:Module {name:"Professional Practice in IT"}),
+(IM)-[:LECTURING]->(GT),
+(DOD)-[:LECTURING]->(DMS),
+(MH)-[:LECTURING]->(ST),
+(DC)-[:LECTURING]->(PPIT),
+(DC)-[:LECTURING]->(MA),
+(GH)-[:LECTURING]->(SSR),
+(g)-[:ATTENDING]->(GT),
+(g)-[:ATTENDING]->(DMS),
+(g)-[:ATTENDING]->(ST),
+(g)-[:ATTENDING]->(PPIT),
+(g)-[:ATTENDING]->(MA),
+(g)-[:ATTENDING]->(SSR);
+```
+
+Assign modules rooms.
+
+```
+MATCH
+(GT:Module {name:"Graph Theory"}),
+(DMS:Module {name:"Database Mgmt Sys"}),
+(MA:Module {name:"Mobile Apps"}),
+(SSR:Module {name:"Server Side RAD"}),
+(ST:Module {name:"Software Testing"}),
+(PPIT:Module {name:"Professional Practice in IT"}), 
+(r1:Room {name:"G0436 CR5"}),
+(r2:Room {name:"G0484 CR1"}),
+(r3:Room {name:"G0481 CR4"}),
+(r4:Room {name:"G0483 CR2"}),
+(r5:Room {name:"G0368"}),
+(r6:Room {name:"G0208"})
+CREATE (GT)-[:IN]->(r1),
+(DMS)-[:IN]->(r2),
+(MA)-[:IN]->(r3),
+(SSR)-[:IN]->(r4),
+(ST)-[:IN]->(r5),
+(PPIT)-[:IN]->(r6);
+```
+
+Assign time and day to modules.
+
+```
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Monday"})-[:AT]->(n:Time {name: "10.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Graph Theory"})
+CREATE
+(m)-[:AT]->(n);
 ```
 
 ## To Query Database
@@ -385,6 +446,32 @@ MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
 (mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN year, dept, course, g, mod, room, time, day, lect;
+
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Tuesday"})-[:AT]->(n:Time {name: "14.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Database Mgmt Sys"})
+CREATE
+(m)-[:AT]->(n);
+
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Wednesday"})-[:AT]->(n:Time {name: "9.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Mobile Apps"})
+CREATE
+(m)-[:AT]->(n);
+
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Wednesday"})-[:AT]->(n:Time {name: "11.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Server Side RAD"})
+CREATE
+(m)-[:AT]->(n);
+
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Wednesday"})-[:AT]->(n:Time {name: "12.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Professional Practice in IT"})
+CREATE
+(m)-[:AT]->(n);
+
+MATCH
+(:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Thursday"})-[:AT]->(n:Time {name: "11.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Software Testing"})
+CREATE
+(m)-[:AT]->(n);
+
 ```
 
 This will return the student's entire time table, the groups, the modules, the corresponding lecturers, the rooms and the times. The following is the same query, only it doesn't display the academic year or department that the user has specified - for a cleaner viewing experience. 
