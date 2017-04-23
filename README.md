@@ -90,6 +90,8 @@ CREATE INDEX ON :Day(name);
 
 ### Creating Year Template:
 
+The following can be modified to add other years in the database; simply change the first line to the desired year: "CREATE (year:Academic_Yr {name: "x"})". Please note that the same year cannot be entered twice.
+
 Start with creating the academic year, adding the days and departments, and creating the necessary relationships between them for each semester. Then add the the times to each day.
  
 ```
@@ -287,45 +289,89 @@ CREATE (year:Academic_Yr {name: "2017"}), (mon1:Day {name:"Monday"}),
 (fri2)-[:AT]->(fri2t13);
 ```
 
+### Creating Semster Template:
+
+The following can also be modified to add semester one in the database. Also beware to change the instances of the year from "2017" to the desired year.
+
 Load in courses from csv file.
 
 ```
 USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///programmes.csv" as row create (:Course {name: row.course, code: row.code, campus: row.degree, dept:row.dept, year: "2017", sem:"2"});
 ```
 
-Connect courses to the corresponding department
+Connect courses to the corresponding department.
 
 ```
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Creative Arts and Media"}), (c:Course {dept:"CCAM", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Creative Arts and Media"}), (c:Course {dept:"CCAM", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Building and Civil Engineering"}), (c:Course {dept:"CE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Building and Civil Engineering"}), (c:Course {dept:"CE", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"}), (c:Course {dept:"CS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"}), (c:Course {dept:"CS", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Culinary Arts"}), (c:Course {dept:"CA", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Culinary Arts"}), (c:Course {dept:"CA", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Electronic and Electrical Engineering"}), (c:Course {dept:"EE", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Heritage and Tourism"}), (c:Course {dept:"HT", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Heritage and Tourism"}), (c:Course {dept:"HT", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Life and Physical Sciences"}), (c:Course {dept:"LPS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Life and Physical Sciences"}), (c:Course {dept:"LPS", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Mechanical and Industrial Engineering"}), (c:Course {dept:"MIE", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Mechanical and Industrial Engineering"}), (c:Course {dept:"MIE", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Service Industries"}), (c:Course {dept:"SI", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Service Industries"}), (c:Course {dept:"SI", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Accounting & Information Systems"}), (c:Course {dept:"SOB_AIS", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Accounting & Information Systems"}), (c:Course {dept:"SOB_AIS", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Management"}), (c:Course {dept:"SOB_M", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"School of Business - Department of Management"}), (c:Course {dept:"SOB_M", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"National Centre for Excellence in Furniture Design and Technology"}), (c:Course {dept:"EFDT", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"National Centre for Excellence in Furniture Design and Technology"}), (c:Course {dept:"EFDT", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Mayo Campus"}), (c:Course {dept:"Mayo", year:"2017", sem:"2" }) CREATE (d)-[:HAS]->(c);
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Mayo Campus"}), (c:Course {dept:"Mayo", year:"2017", sem:"2" }) MERGE (d)-[:HAS]->(c);
 ```
 
+Load in rooms from csv file.
 
+```
+USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///rooms.csv" as row create (:Room {name: row.room, capacity: row.capacity, campus: row.campus, year: "2017", sem:"2"});
+```
+
+Connect the rooms to each time slot of each day.
+
+```
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day)-[:AT]->(t:Time), 
+(r:Room {year:"2017", sem:"2"}) CREATE (t)-[:IN]->(r);
+```
+
+### Adding Data
+
+I had planned on adding the lectures in the templating, unfortunately I was unable to find a resource that supplied me with the lectures and their assigned department. I found the gmit staff directory which was inadequate as I could not tell who was a lecturer and what their department was. I add the lectures connected to the second semester sofware development year three.
+
+```
+USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///lecturers.csv" as row 
+create (:Lecturer {name: row.name, title: row.title, firstname: row.firstname, 
+lastname: row.lastname, location: row.location, ext: row.ext, 
+number: row.number, dept:row.dept, year: "2017", sem:"2"});
+```
+
+Create the lectures relationship to the their assigned departments.
+
+```
+MATCH (:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"}), (l:Lecturer{dept:"CS"}) CREATE (d)-[:HAS]->(l);
+```
+
+Add groups to course.
+
+```
+MATCH (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(course:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})
+CREATE (a:Group{name:"A"}), (b:Group{name:"B"}), 
+(c:Group{name:"C"}), (all:Group{name:"ALL"})
+MERGE (course)-[:GROUP]->(a)
+MERGE (course)-[:GROUP]->(b)
+MERGE (course)-[:GROUP]->(c)
+MERGE (course)-[:GROUP]->(all);
+```
 
 ## To Query Database
 
@@ -359,6 +405,21 @@ MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group{name: "C"})-[:ATTENDING]->
 (mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
 (mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
+```
+
+
+oooooooooooooooooooooooooo
+
+To seach lectures in given **department**:
+
+```
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(l:Lecturer) return y,d,l;
+```
+
+To search for all courses connected to a **department**:
+
+```
+MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Creative Arts and Media"})-[:HAS]->(c:Course) return y,d,c;
 ```
 
 -----
