@@ -11,13 +11,13 @@ Project spec:
 > should store information about student groups, classrooms, lecturers, and
 > work hours – just like the currently used timetabling system at GMIT [1].
 
-I focused mainly on implement a scalable DB. I designed it to accommodate the academic year; each year has to be unique and is the root node of each year. I designed a template to build the bones of the year; two semesters, with days, timeslots, rooms, courses in each. 
+I focused mainly on implementing a scalable DB. I designed it to accommodate the academic year; each year has to be unique and is the root node of each year. I designed a template to build the bones of the year; two semesters, with days, timeslots, rooms, courses in each. 
 
 ## Technolgies
 
 - Neo4j: The World’s Leading Graph Database. Version - 3.1.
 
-- Python3: Utilized etree library to parse element text.
+- Python3: Utilized etree library to parse element data.
 
 ## Database Design
 
@@ -80,9 +80,9 @@ CREATE (year:Academic_Yr {name: "2017"}),
 
 ![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v3.PNG "v0.0.3")
 
-### Third Draft:
+### Final Draft:
 
-The room node was still causing difficulty being so large, decided no to implement it the way I had desired a room for every time slot, and those timeslots would each belong to seperate days. I felt as though it would be too bulky, with the size of the rooms being in creased by the number of days(5) and of timeslots(12)(*60 altogether). The room nodes are not connected to the root node, as I perhaps should have, but have property to define them to their year and semester and a unique constaint to avaid duplicates. 
+The room nodes were still causing difficulty being so large, I decided not to implement it the way I had desired: a room for every time slot, and those timeslots would each belong to seperate days. I felt as though it would be too bulky, with the size of the rooms being increased by the number of days(5) and of timeslots(12)(*60 altogether). I did not connect the room nodes to the root node, as I perhaps should have, but have properties to define them to their year and semester, and a unique constaint to avaid duplicates. 
 
 The following graph has been taken from the finished DB. 
 
