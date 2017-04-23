@@ -1,6 +1,24 @@
 # Graph-Theory-Assignment
 *Database designed with neo4j for the GMIT timetabling system. Third Year, Graph Theory, Software Development.*
 
+## Introduction
+
+Project spec: 
+
+> "The following document contains the instructions for Project 2017 for Graph
+> Theory. You are required to design and prototype a Neo4j [2] database for use
+> in a timetabling system for a third level institute like GMIT. The database
+> should store information about student groups, classrooms, lecturers, and
+> work hours – just like the currently used timetabling system at GMIT [1].
+
+I focused mainly on implement a scalable DB. I designed it to accommodate the academic year; each year has to be unique and is the root node of each year. I designed a template to build the bones of the year; two semesters, with days, timeslots, rooms, courses in each. 
+
+## Technolgies
+
+- Neo4j: The World’s Leading Graph Database. Version - 3.1.
+
+- Python3: Utilized etree library to parse element text.
+
 ## Database Design
 
 ### First Draft:
@@ -62,6 +80,14 @@ CREATE (year:Academic_Yr {name: "2017"}),
 
 ![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v3.PNG "v0.0.3")
 
+### Third Draft:
+
+The room node was still causing difficulty being so large, decided no to implement it the way I had desired a room for every time slot, and those timeslots would each belong to seperate days. I felt as though it would be too bulky, with the size of the rooms being in creased by the number of days(5) and of timeslots(12)(*60 altogether). The room nodes are not connected to the root node, as I perhaps should have, but have property to define them to their year and semester and a unique constaint to avaid duplicates. 
+
+The following graph has been taken from the finished DB. 
+
+![alt text](https://github.com/taraokelly/Graph-Theory-Assignment/blob/master/img/v4.PNG "v0.0.4")
+
 __*N.B. This draft's data is not accurate, just used for testing/demonstrational purposes. Real data will be entered for the finished assignment.*__
 
 
@@ -73,6 +99,7 @@ Create constraint for the Academic_Yr node (this also creates an index).
  
 ```
 CREATE CONSTRAINT ON (a:Academic_Yr) ASSERT a.name IS UNIQUE;
+CREATE CONSTRAINT ON (r:Room) ASSERT a.name IS UNIQUE;
 ```
 
 Create indexes.
@@ -83,7 +110,6 @@ CREATE INDEX ON :Course(name);
 CREATE INDEX ON :Group(name);
 CREATE INDEX ON :Lecture(name);
 CREATE INDEX ON :Module(name);
-CREATE INDEX ON :Room(name);
 CREATE INDEX ON :Time(name);
 CREATE INDEX ON :Day(name);
 ```
@@ -337,13 +363,6 @@ Load in rooms from csv file.
 USING PERIODIC COMMIT LOAD CSV WITH HEADERS FROM "file:///rooms.csv" as row create (:Room {name: row.room, capacity: row.capacity, campus: row.campus, year: "2017", sem:"2"});
 ```
 
-Connect the rooms to each time slot of each day.
-
-```
-MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day)-[:AT]->(t:Time), 
-(r:Room {year:"2017", sem:"2"}) CREATE (t)-[:IN]->(r);
-```
-
 ### Adding Data
 
 I had planned on adding the lectures in the templating, unfortunately I was unable to find a resource that supplied me with the lectures and their assigned department. I found the gmit staff directory which was inadequate as I could not tell who was a lecturer and what their department was. I add the lectures connected to the second semester sofware development year three.
@@ -411,12 +430,12 @@ MATCH
 (SSR:Module {name:"Server Side RAD"}),
 (ST:Module {name:"Software Testing"}),
 (PPIT:Module {name:"Professional Practice in IT"}), 
-(r1:Room {name:"G0436 CR5"}),
-(r2:Room {name:"G0484 CR1"}),
-(r3:Room {name:"G0481 CR4"}),
-(r4:Room {name:"G0483 CR2"}),
-(r5:Room {name:"G0368"}),
-(r6:Room {name:"G0208"})
+(r1:Room {name:"G0436 CR5", year:"2017", sem:"2"}),
+(r2:Room {name:"G0484 CR1", year:"2017", sem:"2"}),
+(r3:Room {name:"G0481 CR4", year:"2017", sem:"2"}),
+(r4:Room {name:"G0483 CR2", year:"2017", sem:"2"}),
+(r5:Room {name:"G0368", year:"2017", sem:"2"}),
+(r6:Room {name:"G0208", year:"2017", sem:"2"})
 CREATE (GT)-[:IN]->(r1),
 (DMS)-[:IN]->(r2),
 (MA)-[:IN]->(r3),
@@ -432,15 +451,7 @@ MATCH
 (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Monday"})-[:AT]->(n:Time {name: "10.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Graph Theory"})
 CREATE
 (m)-[:AT]->(n);
-```
 
-## To Query Database
-
-### Student Timetable:
-
-For a student, they need know the **academic year**, **semester**, and **course**:
-
-```
 MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
 (dept:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
 (course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
@@ -471,33 +482,64 @@ MATCH
 (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Day {name:"Thursday"})-[:AT]->(n:Time {name: "11.00"}), (:Academic_Yr {name:"2017"})-[:SEM_2]->(:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(:Course{name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]-(:Group{name:"C"})-[:ATTENDING]->(m:Module {name:"Software Testing"})
 CREATE
 (m)-[:AT]->(n);
+```
 
+## Collecting Data for Database
+
+To collect the data for the rooms, I used a we crawler courtesy of [Ryan Gordon](https://github.com/FlashGordon95), who kindly shared it with the course. For the programmes I developed a python script to parse the dom and save to a csv file. I had built and used this until I realised that I would have to organise these programmes into departments, luckily the GMIT timetable page offers a filter by department feature, which was more tedious to implement than before but worthwhile none the less. I then used the LOAD CSV command to import the programmes, room, and lecturer data into the Neo4j database. The modules and lectures (although both limited - as mentioned above) , are also based on real data, however the times and rooms assigned to the modules are for demonstrational purposes. The rooms.csv, lectures.csv can be found in the data directory in this folder. The xml files and parser to creates the programmes.csv can also be found in the data folder.
+
+## To Query Database
+
+### Timetable:
+
+For a student, they need know the **academic year**, **semester**, and **course**:
+
+```
+MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(dept:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->
+(course:Course {name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]->(g:Group)-[:ATTENDING]->
+(mod:Module)-[:AT]->(time:Time)<-[:AT]-(day:Day), 
+(mod)<-[:LECTURING]-(lect:Lecturer), (mod)-[:IN]->(room:Room) RETURN year, dept, course, g, mod, room, time, day, lect;
 ```
 
 This will return the student's entire time table, the groups, the modules, the corresponding lecturers, the rooms and the times. The following is the same query, only it doesn't display the academic year or department that the user has specified - for a cleaner viewing experience. 
 
 ```
-MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
-(:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
-(course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group)-[:ATTENDING]->
-(mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
-(mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
+MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(dept:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->
+(course:Course {name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]->(g:Group)-[:ATTENDING]->
+(mod:Module)-[:AT]->(time:Time)<-[:AT]-(day:Day), 
+(mod)<-[:LECTURING]-(lect:Lecturer), (mod)-[:IN]->(room:Room) RETURN course, g, mod, room, time, day, lect;
 ```
 
 To search a student timetable with a specific course **group**:
 
 ```
-MATCH (:Academic_Yr {name: "2017"})-[:SEM_2]-> 
-(:Dept {name:"Galway Campus - Dept of Computer Science & Applied Physics"})-[:HAS]->
-(course:Course {name:"Software Development L7 Y3"})-[:GROUP]->(g:Group{name: "C"})-[:ATTENDING]->
-(mod:Module)-[:ON]->(day:Day)-[:AT]->(time:Time)-[:IN]->(room:Room), 
-(mod)<-[:LECTURING]-(lect:Lecturer) RETURN course, g, mod, room, time, day, lect;
+MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(dept:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->
+(course:Course {name:"Computing in Software Development L7 Yr 3 Sem 6"})-[:GROUP]->(g:Group{name:"C"})-[:ATTENDING]->
+(mod:Module)-[:AT]->(time:Time)<-[:AT]-(day:Day), 
+(mod)<-[:LECTURING]-(lect:Lecturer), (mod)-[:IN]->(room:Room) RETURN course, g, mod, room, time, day, lect;
 ```
 
+For a lecturer to search their timetable, they need enter their **name**, and **department**:
 
-oooooooooooooooooooooooooo
+```
+MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(dept:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(lect:Lecturer{name:"Ian Mc Loughlin"})-[:LECTURING]->(mod:Module)-[:AT]->(time:Time)<-[:AT]-(day:Day), 
+(mod)<-[:ATTENDING]-(g:Group)<-[:GROUP]- (course:Course), (mod)-[:IN]->(room:Room) RETURN course, g, mod, room, time, day, lect;
+```
+For both student timetables and lecturer timetables, they can easily filter by module, lecturer, group, course, room, day and/or time.
 
-To seach lectures in given **department**:
+Check to see if a room is free, or who is occupying the room.
+
+```
+MATCH (year:Academic_Yr {name: "2017"})-[:SEM_2]-> 
+(dept:Dept)-[:HAS]->(lect:Lecturer)-[:LECTURING]->(mod:Module)-[:AT]->(time:Time{name:"10.00"})<-[:AT]-(day:Day{name:"Monday"}), 
+(mod)<-[:ATTENDING]-(g:Group)<-[:GROUP]- (course:Course), (mod)-[:IN]->(room:Room{name:"G0436 CR5"}) RETURN course, g, mod, room, time, day, lect;
+```
+
+To search lectures in given **department**:
 
 ```
 MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Dept of Computer Science & Applied Physics"})-[:HAS]->(l:Lecturer) return y,d,l;
@@ -508,6 +550,23 @@ To search for all courses connected to a **department**:
 ```
 MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Creative Arts and Media"})-[:HAS]->(c:Course) return y,d,c;
 ```
+
+## Conclusion
+This assignment has been overall, a learned experience. If I were to design another graph database in Neo4j, I would have a better idea of how to design and structure the nodes, edges and properties that compose the database.
+
+**References:**
+
+https://neo4j.com/product/
+http://stackoverflow.com/questions/24015854/check-whether-a-node-exists-if-not-create
+http://stackoverflow.com/questions/24438083/neo4j-csv-cypher-import
+http://stackoverflow.com/questions/30871599/neo4j-syntax-for-loading-csv-with-headers
+https://neo4j.com/developer/guide-import-csv/
+http://jexp.de/blog/2014/06/load-csv-into-neo4j-quickly-and-successfully/
+https://neo4j.com/blog/importing-data-neo4j-via-csv/
+http://stackoverflow.com/questions/24015854/check-whether-a-node-exists-if-not-create
+http://stackoverflow.com/questions/30636248/split-a-string-only-by-first-space-in-python
+https://www.tutorialspoint.com/python/python_for_loop.htm
+https://docs.python.org/3/library/xml.etree.elementtree.html
 
 -----
 
