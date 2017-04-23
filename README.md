@@ -486,7 +486,7 @@ CREATE
 
 ## Collecting Data for Database
 
-To collect the data for the rooms, I used a we crawler courtesy of [Ryan Gordon](https://github.com/FlashGordon95), who kindly shared it with the course. For the programmes I developed a python script to parse the dom and save to a csv file. I had built and used this until I realised that I would have to organise these programmes into departments, luckily the GMIT timetable page offers a filter by department feature, which was more tedious to implement than before but worthwhile none the less. I then used the LOAD CSV command to import the programmes, room, and lecturer data into the Neo4j database. The modules and lectures (although both limited - as mentioned above) , are also based on real data, however the times and rooms assigned to the modules are for demonstrational purposes. The rooms.csv, lectures.csv, programmes.csv can be located in the import directory in the database directory. The xml files and parser to creates the programmes.csv can also be found in the data folder.
+To collect the data for the rooms, I used a web crawler courtesy of [Ryan Gordon](https://github.com/FlashGordon95), who kindly shared it with the course. For the programmes I developed a python script to parse the dom and save to a csv file. I had built and used this until I realised that I would have to organise these programmes into departments, luckily the GMIT timetable page offers a filter by department feature, which was more tedious to implement than before but worthwhile none the less. I then used the LOAD CSV command to import the programmes, room, and lecturer data into the Neo4j database. The modules and lectures (although both limited - as mentioned above) , are also based on real data, however the times and rooms assigned to the modules are for demonstrational purposes. The rooms.csv, lectures.csv, programmes.csv can be located in the import directory in the database directory. The xml files and parser to creates the programmes.csv can also be found in the data folder.
 
 ## To Query Database
 
@@ -552,7 +552,7 @@ MATCH (y:Academic_Yr {name:"2017"})-[:SEM_2]->(d:Dept {name:"Centre for the Crea
 ```
 
 ## Conclusion
-This assignment has been overall, a learned experience. If I were to design another graph database in Neo4j, I would have a better idea of how to design and structure the nodes, edges and properties that compose the database. And if I were to redo this project, I would _**place the group node after the module and before the time, because at the momemt you cannot differenciate between the modules and times that each group has**_, and manage my time more efficiently.
+This assignment has been overall, a learned experience. If I were to design another graph database in Neo4j, I would have a better idea of how to design and structure the nodes, edges and properties that compose the database. And if I were to redo this project, I would _**place the group node after the module and before the time, because at the moment you cannot differenciate between the modules and times that each group has**_, and manage my time more efficiently.
 
 **References:**
 
