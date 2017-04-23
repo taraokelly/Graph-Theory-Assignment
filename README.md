@@ -82,7 +82,7 @@ CREATE (year:Academic_Yr {name: "2017"}),
 
 ### Final Draft:
 
-The room nodes were still causing difficulty being so large, I decided not to implement it the way I had desired: a room for every time slot, and those timeslots would each belong to seperate days. I felt as though it would be too bulky, with the size of the rooms being increased by the number of days(5) and of timeslots(12)(*60 altogether). I did not connect the room nodes to the root node, as I perhaps should have, but have properties to define them to their year and semester, and a unique constaint to avaid duplicates. 
+The room nodes were still causing difficulty being so large, I decided not to implement it the way I had desired: a room for every time slot, and those timeslots would each belong to seperate days. I felt as though it would be too bulky, with the size of the rooms being increased by the number of days(5) and of timeslots(12)(*60 altogether). I did not directly connect the room nodes to the root node, as I perhaps should have since they are now not connected to the time or day nodes, but have properties to define them to their year and semester, and a unique constaint to avaid duplicates. 
 
 The following graph has been taken from the finished DB. 
 
