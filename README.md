@@ -13,6 +13,9 @@ Project spec:
 
 I focused mainly on implementing a scalable DB. I designed it to accommodate the academic year; each year has to be unique and is the root node of each year. I designed a template to build the bones of the year; two semesters, with days, timeslots, rooms, courses in each. 
 
+DB username: neo4j
+DB password: 7ate9
+
 ## Technolgies
 
 - Neo4j: The World’s Leading Graph Database. Version - 3.1.
